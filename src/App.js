@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { cyan500 } from 'material-ui/styles/colors'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+
+import IndexNavTodo from './components/IndexNavTodo/index'
+
 import './App.css'
 
 const muiTheme = getMuiTheme({
@@ -15,6 +18,7 @@ class App extends Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div className="App">
+          <IndexNavTodo/>
         </div>
       </MuiThemeProvider>
     )
