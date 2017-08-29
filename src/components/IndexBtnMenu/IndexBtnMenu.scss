@@ -1,0 +1,70 @@
+.index-btn-menu {
+  position: fixed;
+  width: 42px;
+  height: 42px;
+  right: 27px;
+  top: 21px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: background 0.3s ease-out;
+  transition: background 0.3s ease-out;
+  z-index: 10;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.index-btn-menu-icon {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  left: 0;
+  top: 0;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.37, 0.16, 0.12, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.37, 0.16, 0.12, 1);
+  transition: transform 0.3s cubic-bezier(0.37, 0.16, 0.12, 1);
+  transition: transform 0.3s cubic-bezier(0.37, 0.16, 0.12, 1), -webkit-transform 0.3s cubic-bezier(0.37, 0.16, 0.12, 1);
+  -webkit-transform-origin: 24px 21px;
+      -ms-transform-origin: 24px 21px;
+          transform-origin: 24px 21px;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.index-btn-menu-icon-line {
+  display: block;
+  position: absolute;
+  width: 36px;
+  height: 2px;
+  right: 0;
+  top: 20px;
+  background-color: #d4b079;
+  -webkit-transition: opacity 0.25s ease-out, width 0.25s ease-out, background-color 0.25s ease-out;
+  transition: opacity 0.25s ease-out, width 0.25s ease-out, background-color 0.25s ease-out;
+}
+.index-btn-menu-icon::before, .index-btn-menu-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #d4b079;
+  height: 2px;
+  right: 0;
+  -webkit-transition: width 0.25s ease-out, background-color 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  transition: width 0.25s ease-out, background-color 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, width 0.25s ease-out, background-color 0.25s ease-out;
+  transition: transform 0.25s ease-out, width 0.25s ease-out, background-color 0.25s ease-out, -webkit-transform 0.25s ease-out;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+}
+.over .index-btn-menu-icon::before, .over .index-btn-menu-icon::after {
+  width: 36px;
+}
+.index-btn-menu-icon::before {
+  width: 42px;
+  top: 11px;
+}
+.index-btn-menu-icon::after {
+  width: 30px;
+  bottom: 11px;
+}

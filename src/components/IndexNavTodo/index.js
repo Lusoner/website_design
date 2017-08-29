@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import './IndexNavTodo.css'
 
 const TodoItem = (props) => (
-  <li className="index-nav-todo-item">
-    {props.content}
+  <li className="page-nav-list-item">
+    <a href={props.href}>
+      <span>{props.content}</span>
+    </a>
   </li>
 )
 const navData = [
@@ -28,13 +30,19 @@ const navData = [
 export default class IndexNavTodo extends Component {
   render() {
     return (
-       <ul className="index-nav-todo">
-         {
-           navData.map((data, index) => (
-             <TodoItem key={index} content={data.content}/>
-           ))
-         }
-       </ul>
+      <div className="page-nav">
+        <div className="pag-nav-inner">
+          <div className="page-nav-cont">
+            <ul className="page-nav-list">
+              {
+                navData.map((data, index) => (
+                  <TodoItem key={index} content={data.content}/>
+                ))
+              }
+            </ul>
+          </div>
+        </div>
+      </div>
     )
   }
 }
