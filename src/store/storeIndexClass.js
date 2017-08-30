@@ -1,11 +1,11 @@
 import { observable, action, computed } from 'mobx'
 
 export class IndexClass {
-  @observable isScrolled = true
+  @observable isScrolled = false
   @observable isNavOpen = false
 
-  @action triggerScrollStatus = () => {
-    this.isScrolled = !this.isScrolled
+  @action triggerScrollStatus = (status) => {
+    this.isScrolled = (status !== undefined) ? status : !this.isScrolled
   }
   @action triggerNavStatus = () => {
     this.isNavOpen = !this.isNavOpen

@@ -1,0 +1,11 @@
+.is-home .container-content {
+  background-color: #2f2f38;
+  color: #ffffff;
+}
+.container-content:after, .container-content:before {
+  content: "";
+  display:  table;
+}
+.container-content:after {
+  clear: both;
+}
