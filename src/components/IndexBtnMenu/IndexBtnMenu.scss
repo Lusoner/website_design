@@ -68,3 +68,41 @@
   width: 30px;
   bottom: 11px;
 }
+
+@media (min-width: 680px) {
+  .index-btn-menu {
+    width: 60px;
+    height: 60px;
+    right: 55px;
+    top: 39px;
+    -webkit-transition: opacity 0.25s ease-out;
+    transition: opacity 0.25s ease-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .index-btn-menu-icon{
+    width: 60px;
+    height: 60px;
+    -webkit-transform-origin: 35px 30px;
+    -ms-transform-origin: 35px 30px;
+    transform-origin: 35px 30px;
+  }
+  .index-btn-menu-icon-line{
+    width: 50px;
+    top: 29px;
+  }
+  .over .index-btn-menu-icon-line{
+    width: 50px;
+  }
+  .over .index-btn-menu-icon::before, .over .index-btn-menu-icon::after{
+    width: 50px;
+  }
+  .index-btn-menu-icon::before{
+    width: 60px;
+    top: 16px;
+  }
+  .index-btn-menu-icon::after{
+    width: 40px;
+    bottom: 16px;
+  }
+}

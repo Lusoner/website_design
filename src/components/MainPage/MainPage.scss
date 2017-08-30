@@ -1,14 +1,101 @@
 .main-page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+/**
+ * Style of main page nav which is always displayed in top right.
+ */
+.main-page-header {
+  .page-nav {
+    display: none;
+  }
+  .page-nav-inner {
+    display: block;
+    height: auto;
+  }
   .page-nav-cont {
     display: block;
     height: auto;
     padding-top: 0;
     padding-bottom: 0;
   }
+  .page-nav-cont {
+    display: block;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .page-nav-list {
+    right: 50px;
+    top: 32px;
+    float: right;
+  }
 }
 
+/**
+ * Style of main page while the index nav is open
+ */
+
+.is-nav-open {
+
+  /**
+  * Style of main page's menu button while the index nav is open
+  */
+  .index-btn-menu-icon {
+    &::before {
+      width: 36px;
+      -webkit-transform: rotate(45deg) translate(1px, -6px);
+          -ms-transform: rotate(45deg) translate(1px, -6px);
+              transform: rotate(45deg) translate(1px, -6px);
+    }
+    &::after {
+      width: 36px;
+      -webkit-transform: rotate(-45deg) translate(1px, 6px);
+          -ms-transform: rotate(-45deg) translate(1px, 6px);
+              transform: rotate(-45deg) translate(1px, 6px);
+    }
+  }
+  .index-btn-menu-icon-line {
+    width: 36px;
+    opacity: 0;
+  }
+  .over {
+    .index-btn-menu-icon {
+      &::before,&::after {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  /**
+  * Style of main page's menu button while the index nav is open
+  */
+  .page-nav {
+    -webkit-transform: translateY(100%) translateZ(1px);
+            transform: translateY(100%) translateZ(1px);
+    opacity: 1;
+  }
+}
+
+
+/**
+ * Style of main page while the main page is scrolled
+ */
+
+ .is-scrolled {
+   .main-page-header {
+     .page-nav {
+      opacity: 0;
+      pointer-events: none;
+     }
+   }
+ }
+
 @media (min-width: 680px) {
-  .main-page {
+  .main-page-header {
     .page-nav {
       display: block;
       width: auto;
@@ -23,6 +110,37 @@
       -webkit-transition: opacity 0.55s cubic-bezier(0.77, 0, 0.175, 1);
       transition: opacity 0.55s cubic-bezier(0.77, 0, 0.175, 1);
       opacity: 1;
+    }
+  }
+  .is-scrolled {
+    .main-page-header {
+      .page-nav {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    .index-btn-menu {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  .is-nav-open {
+    .index-btn-menu-icon {
+      &::before {
+        width: 50px;
+        -webkit-transform: rotate(45deg) translate(2px, -8px);
+        -ms-transform: rotate(45deg) translate(2px, -8px);
+        transform: rotate(45deg) translate(2px, -8px);
+      }
+      &::after {
+        width: 50px;
+        -webkit-transform: rotate(-45deg) translate(2px, 8px);
+        -ms-transform: rotate(-45deg) translate(2px, 8px);
+        transform: rotate(-45deg) translate(2px, 8px);
+      }
+    }
+    .index-btn-menu-icon-line {
+      width: 50px;
     }
   }
 }

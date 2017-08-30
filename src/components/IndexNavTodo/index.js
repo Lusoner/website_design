@@ -31,7 +31,7 @@ export default class IndexNavTodo extends Component {
   render() {
     return (
       <div className="page-nav">
-        <div className="pag-nav-inner">
+        <div className="page-nav-inner">
           <div className="page-nav-cont">
             <ul className="page-nav-list">
               {
