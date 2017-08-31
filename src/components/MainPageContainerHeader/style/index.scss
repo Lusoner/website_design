@@ -14,12 +14,18 @@
   overflow: hidden;
 }
 
+.is-loaded {
+  .container-header-visual {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover
+  }
+}
+
 @media (min-width: 680px) {
   .is-loaded {
     .container-header-visual {
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover
+      background-image: url(../../common/images/main.jpeg);
     }
   }
 }

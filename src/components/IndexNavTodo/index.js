@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './IndexNavTodo.css'
+import './style/index.css'
 
 const TodoItem = (props) => (
   <li className="page-nav-list-item">

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { lazyload } from 'react-lazyload'
 
 import './style/index.css'
 
@@ -43,6 +44,12 @@ const BlogPaper = (props) => (
   </div>
 )
 
+@lazyload({
+  height: 200,
+  once: true,
+  overflow: true,
+  fadein: true,
+})
 export default class MainPageContainerContentBlog extends Component {
 
   render() {

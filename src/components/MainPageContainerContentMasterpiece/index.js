@@ -56,15 +56,21 @@ const ElementItem = (props) => (
   </div>
 )
 
-export default class MainPageContainerContentMasterpiece extends Component {
+class MainPageContainerContentMasterpiece extends Component {
 
   render() {
     return (
       <div className="container-content-masterpiece">
         <div className="container-content-masterpiece-bg">
           <div className="container-content-masterpiece-bg-square">
+            <svg aria-labelledby="container-content-masterpiece-square-title" role="img" width="300" height="300" viewBox="0 0 300 300">
+              <path d="M0 0h300v300H0z"></path>
+            </svg>
           </div>
           <div className="container-content-masterpiece-bg-circle">
+					<svg aria-labelledby="HomeAbout-lines1-title" role="img" width="20" height="374" viewBox="0 0 20 374">
+            <circle cx="180" cy="180" r="180"></circle>
+					</svg>
           </div>
           <div className="container-content-masterpiece-bg-line1">
           </div>
@@ -106,3 +112,5 @@ export default class MainPageContainerContentMasterpiece extends Component {
     )
   }
 }
+
+export default MainPageContainerContentMasterpiece

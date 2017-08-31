@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 
 import indexClass from '../../store/storeIndexClass'
 
-import './IndexBtnMenu.css'
+import './style/index.css'
 
 @observer
 export default class IndexBtnMenu extends Component {
